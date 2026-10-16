@@ -1,4 +1,4 @@
-package password_generator_web.password;
+package password_generator_web.password.generator;
 
 import org.springframework.stereotype.Component;
 
