@@ -5,6 +5,8 @@ import password_generator_web.password.generator.PasswordGenerator;
 
 @Service
 public class PasswordService {
+    // min rule length to prevent impossible requests
+    private static final int MIN_LENGTH = 16;
     // max rule length to prevent impossible requests
     private static final int MAX_LENGTH = 128;
 
@@ -18,9 +20,11 @@ public class PasswordService {
 
     public String generate(int length, boolean lower, boolean upper,
                            boolean digits, boolean symbols) {
-        // max length exception rule
+        // length limits, max and min
         if (length > MAX_LENGTH){
             throw new IllegalArgumentException("Length cannot exceed " + MAX_LENGTH + " characters.");
+        } else if (length < MIN_LENGTH){
+            throw new IllegalArgumentException("Length must be at least " + MIN_LENGTH + " characters.");
         }
 
         return generator.generate(length, lower, upper, digits, symbols);
