@@ -12,8 +12,8 @@ public class PasswordApplication {
 		//SpringApplication.run(PasswordApplication.class, args);
 
 		// ConfigurableApplicationContext for a container in order to test the class functionality
-		ConfigurableApplicationContext ctx = SpringApplication.run(PasswordApplication.class, args);
-		System.out.println(ctx.getBean(PasswordGenerator.class).generate(16, true, true, true, true));
+		SpringApplication.run(PasswordApplication.class, args);
+		//System.out.println(ctx.getBean(PasswordGenerator.class).generate(16, true, true, true, true));
 	}
 
 }
