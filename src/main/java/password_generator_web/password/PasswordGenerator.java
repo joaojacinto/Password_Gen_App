@@ -1,10 +1,14 @@
 package password_generator_web.password;
 
+import org.springframework.stereotype.Component;
+
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
+@Component
 public class PasswordGenerator {
     // unchangeable sequence
     private static final String LOWER   = "abcdefghijklmnopqrstuvwxyz";
