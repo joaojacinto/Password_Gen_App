@@ -9,6 +9,14 @@ const passwordBox  = document.getElementById("passwordBox");
 const copyBtn      = document.getElementById("copyBtn");
 const errorBox     = document.getElementById("errorBox");
 
+const DEFAULT_LENGTH = 16;
+
+function resetLength() {
+    lengthInput.value = DEFAULT_LENGTH;
+    lengthValue.textContent = DEFAULT_LENGTH;
+}
+
+window.addEventListener("pageshow", resetLength);
 
 lengthInput.addEventListener("input", () => {
     lengthValue.textContent = lengthInput.value;
