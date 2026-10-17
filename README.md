@@ -24,7 +24,7 @@ Choose the length and the character types, then copy the result with one click.
 
 ## Running it
 
-Requirements: JDK 27 or newer.
+Requirements: JDK 25
 
 ```bash
 git clone https://github.com/joaojacinto/Password_Gen_App.git
